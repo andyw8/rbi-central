@@ -143,3 +143,7 @@ class Devise::UnlocksController < DeviseController
   # The path used after unlocking the resource
   def after_unlock_path_for(resource); end
 end
+
+# @shim: Devise controllers are loaded by rails
+class Devise::OmniauthCallbacksController < DeviseController
+end
